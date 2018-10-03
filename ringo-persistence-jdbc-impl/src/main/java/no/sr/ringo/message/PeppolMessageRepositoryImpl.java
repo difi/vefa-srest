@@ -277,7 +277,7 @@ public class PeppolMessageRepositoryImpl implements PeppolMessageRepository {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setTimestamp(1, new Timestamp(delivered.getTime()));
             ps.setString(2, remoteAP != null ? remoteAP.toString() : null);
-            ps.setString(3, transmissionIdentifier.getValue());
+            ps.setString(3, transmissionIdentifier.getIdentifier());
             ps.setLong(4, msgNo.toLong());
             ps.executeUpdate();
         } catch (SQLException e) {

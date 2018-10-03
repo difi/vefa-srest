@@ -104,7 +104,7 @@ public class SearchParams implements MessageSearchParams {
         if (participantIdWithoutQuotes == null || participantIdWithoutQuotes.trim().length() == 0) {
             return null;
         } else {
-            return new ParticipantIdentifier(participantIdWithoutQuotes);
+            return ParticipantIdentifier.of(participantIdWithoutQuotes);
         }
     }
 

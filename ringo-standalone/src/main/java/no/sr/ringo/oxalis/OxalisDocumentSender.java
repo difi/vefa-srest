@@ -7,6 +7,7 @@ import no.difi.oxalis.outbound.OxalisOutboundComponent;
 import no.difi.oxalis.outbound.transmission.TransmissionRequestBuilder;
 import no.sr.ringo.common.RingoConstants;
 import no.sr.ringo.message.MessageMetaData;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,7 +47,7 @@ public class OxalisDocumentSender implements PeppolDocumentSender {
         // Write the transmission id and where the message was delivered
         final String msg = String.format("Message sent to %s using %s was assigned transmissionId : %s\n",
                 transmissionRequest.getEndpoint().getAddress().toString(),
-                transmissionRequest.getEndpoint().getTransportProfile().getValue(),
+                transmissionRequest.getEndpoint().getTransportProfile().getIdentifier(),
                 transmissionResponse.getTransmissionIdentifier()
         );
 

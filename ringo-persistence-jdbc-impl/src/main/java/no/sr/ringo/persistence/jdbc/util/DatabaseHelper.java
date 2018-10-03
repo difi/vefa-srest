@@ -179,9 +179,9 @@ public class DatabaseHelper {
             ps.setString(7, tmd.getPeppolHeader().getPeppolChannelId() != null ?
                     tmd.getPeppolHeader().getPeppolChannelId().stringValue() : null);
             ps.setString(8, tmd.getReceptionId().stringValue());
-            ps.setString(9, tmd.getTransmissionId() != null ? tmd.getTransmissionId().getValue() : null);
+            ps.setString(9, tmd.getTransmissionId() != null ? tmd.getTransmissionId().getIdentifier() : null);
             ps.setString(10, tmd.getSbdhInstanceIdentifier() != null ?
-                    tmd.getSbdhInstanceIdentifier().getValue() : null);
+                    tmd.getSbdhInstanceIdentifier().getIdentifier() : null);
             ps.setString(11, tmd.getPeppolHeader().getPeppolDocumentTypeId().getIdentifier());
             ps.setString(12, tmd.getPeppolHeader().getProcessIdentifier().getIdentifier());
             ps.setString(13, tmd.getPayloadUri().toString());

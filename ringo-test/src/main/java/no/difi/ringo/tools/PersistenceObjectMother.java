@@ -84,15 +84,15 @@ public class PersistenceObjectMother {
     }
 
     public static ParticipantIdentifier getTestParticipantIdForConsumerReceiver() {
-        return new ParticipantIdentifier("9999:01029400470");
+        return ParticipantIdentifier.of("9999:01029400470");
     }
 
     public static ParticipantIdentifier getTestParticipantId() {
-        return new ParticipantIdentifier("9908:976098897");
+        return ParticipantIdentifier.of("9908:976098897");
     }
 
     public static ParticipantIdentifier getAdamsParticipantId() {
-        return new ParticipantIdentifier("9908:988890081");
+        return ParticipantIdentifier.of("9908:988890081");
     }
 
     public static final DocumentTypeIdentifier getDocumentIdForBisInvoice() {
