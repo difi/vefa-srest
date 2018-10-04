@@ -92,7 +92,7 @@ public class RegisterUseCase {
 
         // of account entry and account_receiver entry (only if registering in SMP)
         //Prefix given orgNo with 9908
-        ParticipantIdentifier participantId = registrationData.isRegisterSmp() ? new ParticipantIdentifier(RingoConstant.NORWEGIAN_PEPPOL_PARTICIPANT_PREFIX + registrationData.getOrgNo()) : null;
+        ParticipantIdentifier participantId = registrationData.isRegisterSmp() ? ParticipantIdentifier.of(RingoConstant.NORWEGIAN_PEPPOL_PARTICIPANT_PREFIX + registrationData.getOrgNo()) : null;
         Account storedAccount = accountRepository.createAccount(account, participantId);
 
         // Encrypts/hashes the password

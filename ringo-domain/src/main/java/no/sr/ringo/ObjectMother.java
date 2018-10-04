@@ -42,19 +42,19 @@ public class ObjectMother {
     }
 
     public static ParticipantIdentifier getTestParticipantIdForSMPLookup() {
-        return new ParticipantIdentifier(RingoConstant.NORWEGIAN_PEPPOL_PARTICIPANT_PREFIX +RingoConstant.DIFI_ORG_NO);
+        return ParticipantIdentifier.of(RingoConstant.NORWEGIAN_PEPPOL_PARTICIPANT_PREFIX +RingoConstant.DIFI_ORG_NO);
     }
 
     public static ParticipantIdentifier getTestParticipantIdForConsumerReceiver() {
-        return new ParticipantIdentifier("9999:01029400470");
+        return ParticipantIdentifier.of("9999:01029400470");
     }
 
     public static ParticipantIdentifier getTestParticipantId() {
-        return new ParticipantIdentifier(RingoConstant.NORWEGIAN_PEPPOL_PARTICIPANT_PREFIX +RingoConstant.DUMMY_ORG_NO);
+        return ParticipantIdentifier.of(RingoConstant.NORWEGIAN_PEPPOL_PARTICIPANT_PREFIX +RingoConstant.DUMMY_ORG_NO);
     }
 
     public static ParticipantIdentifier getAdamsParticipantId() {
-        return new ParticipantIdentifier(RingoConstant.NORWEGIAN_PEPPOL_PARTICIPANT_PREFIX +"988890081");
+        return ParticipantIdentifier.of(RingoConstant.NORWEGIAN_PEPPOL_PARTICIPANT_PREFIX +"988890081");
     }
 
     public static final DocumentTypeIdentifier getDocumentIdForBisInvoice() {

@@ -77,7 +77,7 @@ public class MessageRepositoryH2ImplTest {
     @Test
     public void findAccountByParticipantId() {
         MessageRepositoryH2Impl repo = (MessageRepositoryH2Impl) messageDbmsRepository;
-        AccountId accountId = repo.srAccountIdForReceiver(new ParticipantIdentifier("9908:976098897"));
+        AccountId accountId = repo.srAccountIdForReceiver(ParticipantIdentifier.of("9908:976098897"));
         assertEquals(accountId.toInteger(), Integer.valueOf(1));
     }
 
